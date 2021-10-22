@@ -66,6 +66,7 @@ Objects appear in foldouts which you can collapse/expand
     "subObj2": {},
     "subObj3": {
       "boolField": true
+      }
     }
   ]
 }
