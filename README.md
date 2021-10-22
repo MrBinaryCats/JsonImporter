@@ -6,9 +6,9 @@ This package adds a custom editor for `.json` files. The default Unity behaviour
 <img src="https://user-images.githubusercontent.com/85991229/138490047-97ee38d3-856e-4a0f-a601-6ae7820cd057.png" width="300" align="center" /><img src="https://user-images.githubusercontent.com/85991229/138490139-31a9819b-d96f-4bc3-b035-12d8927b352d.png" width="300"  align="center" />
 </p>
 
-## Summery
+## Summary
 ☑️This package will:
-- Improve legability of json files within the editor
+- Improve legibility of json files within the editor
 - Change the way `.json` file preview is rendered in Unity
 - Add interactive UI elements to the preview
 
@@ -31,9 +31,9 @@ Here are some examples
 ### Simple Types
 ```json
 {
-  "stringfield": "1",
-  "intfield": "int",
-  "boolfield": true
+  "stringField": "1",
+  "intField": "int",
+  "boolField": true
 }
 ```
 ![image](https://user-images.githubusercontent.com/85991229/138494034-b29b63fc-d7e1-4645-96e6-9ba4221ca57d.png)
@@ -71,6 +71,6 @@ Objects appear in foldouts which you can collapse/expand
   ]
 }
 ```
-Simular to objects, arrays elements are collapsable
+Similar to objects, arrays elements are collapsable
 ![image](https://user-images.githubusercontent.com/85991229/138493195-04373e4b-d949-4b08-a45d-72dd87fd39f4.png)
 
