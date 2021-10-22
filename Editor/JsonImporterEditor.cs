@@ -42,6 +42,7 @@ namespace Editor
                 GUI.enabled = false;
             }
         }
+
         private static void Draw(JObject obj)
         {
             foreach (var keyValuePair in obj)
@@ -79,33 +80,27 @@ namespace Editor
             for (var index = 0; index < obj.Count; index++)
             {
                 var token = obj[index];
-                switch (token.Type)
-                {
-                    case JTokenType.Object:
-                        using (new EditorGUI.IndentLevelScope())
+                if (Foldout(token, $"element {index}"))
+                    using (new EditorGUI.IndentLevelScope())
+                    {
+                        switch (token.Type)
                         {
-                            if (Foldout(token, $"element {index}"))
-                                using (new EditorGUI.IndentLevelScope())
-                                    Draw(token.Value<JObject>());
-                        }
+                            case JTokenType.Object:
+                                Draw(token.Value<JObject>());
 
-                        break;
-                    case JTokenType.Array:
-                        using (new EditorGUI.IndentLevelScope())
-                        {
-                            if (Foldout(token, $"element {index}"))
-                            {
+                                break;
+                            case JTokenType.Array:
                                 using (new EditorGUI.IndentLevelScope())
                                     Draw(token.Value<JArray>());
-                            }
+                                break;
+                            default:
+                                var value = token.ToString(Formatting.Indented);
+                                EditorGUILayout.LabelField(value);
+                                break;
                         }
+                    }
 
-                        break;
-                    default:
-                        var value = token.ToString(Formatting.Indented);
-                        EditorGUILayout.LabelField(value);
-                        break;
-                }
+                
             }
         }
 
