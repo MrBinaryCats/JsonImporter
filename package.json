@@ -1,0 +1,20 @@
+{
+  "name": "com.binarycats.jsonimporter",
+  "version": "1.0.0",
+  "displayName": "Json Importer",
+  "description": "Adds an interactive importer editor for .json files",
+  "unity": "2019.1",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "json",
+    "import",
+    "editor"
+  ],
+  "author": {
+    "name": "BinaryCats",
+    "email": "david@binarycats.co.uk",
+    "url": "https://github.com/MrBinaryCats"
+  }
+}
